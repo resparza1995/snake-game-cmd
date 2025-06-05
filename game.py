@@ -12,6 +12,11 @@ class Game:
         curses.KEY_RIGHT: curses.KEY_LEFT
     }
 
+    def show_score(self):
+        self.win.addstr(self.sh // 2, self.sw // 2 - 5, f"Score: {self.score}")
+        self.win.refresh()
+        curses.napms(1000)
+
     def __init__(self, stdscr):
         self.stdscr = stdscr
         self.sh, self.sw = curses.LINES, curses.COLS
@@ -71,9 +76,8 @@ class Game:
             # show score
             self.win.addstr(0, 2, f'Score: {self.score} ')
 
-        curses.endwin()
-        print(f"Game Over. Score: {self.score}")
-
+        self.show_score()
+        return self.score
 
 
 
