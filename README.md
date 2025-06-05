@@ -1,5 +1,5 @@
 ## Snake Game CMD
-Snake game developed in Python to run in the command line.
+Snake game developed in Python to run in the command line.   
 Gameplay, [here](https://youtu.be/zsprRhqMh5k).
 
 ### How to start
